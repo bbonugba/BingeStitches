@@ -18,13 +18,13 @@ $binge = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
     <link rel="stylesheet" href="CSS/materialize.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <style>
+    <!-- <style>
         .text {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; !important
             /* font-size: 50px; !important */
             
         }
-    </style>
+    </style> -->
 </head>
 <body>
     <main>
@@ -33,6 +33,16 @@ $binge = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
             <p>
             Bees! Welcome to our Blog- Binge Stitches- where we spend a great amout of time as 'sewists', get creative, rub minds (or should I say hands!) together and have fun playing around with them. We are constantly uploading numerous hot new videos on sewing styles, techniques, fabrics, accessories and related stuff for your streaming pleasure! So, come along and have unserrated fun on our blog😘😊.
             </p>
+            <div class="row">
+                <div class="col s12 l4">
+                    <div class="card"><?php foreach ($binge as $video) { ?>
+                        <div class="card-video"></div>
+                        <div class="card-content"></div>
+                        <div class="card-action"></div>
+                    </div>
+                <?php } ?>
+                </div>
+            </div>
         </div>
     </main>
 </body>
